@@ -8,3 +8,10 @@ spring:
       username: postgres
       password: postgres
       url: jdbc:postgresql://localhost:5433/keycloak
+
+keycloak:
+  url: http://localhost:8484
+  realm: rpg-shop
+  client:
+    id: rpg-shop
+    secret: MS9PSupq4zXwKHLIdTWAlTPaOTUdd0tt

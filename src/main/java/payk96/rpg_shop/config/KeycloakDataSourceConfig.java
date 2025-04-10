@@ -17,7 +17,7 @@ import java.util.Objects;
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = "payk96.rpg_shop.keycloak.repo",
+        basePackages = "payk96.rpg_shop.keycloak.repository",
         entityManagerFactoryRef = "keycloakEntityManagerFactory",
         transactionManagerRef = "keycloakTransactionManager"
 )
@@ -56,7 +56,7 @@ public class KeycloakDataSourceConfig {
             EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(keycloakDataSource())
-                .packages("payk96.rpg_shop.keycloak.models")
+                .packages("payk96.rpg_shop.keycloak.model")
                 .persistenceUnit("keycloak")
                 .properties(hibernateProperties())
                 .build();
