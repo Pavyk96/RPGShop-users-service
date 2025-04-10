@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    keycloak:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: postgres
+      url: jdbc:postgresql://localhost:5433/keycloak

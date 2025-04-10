@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: InternshipAggregator
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    internship:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: postgres
+  keycloak:
+    realm: rpg-shop
