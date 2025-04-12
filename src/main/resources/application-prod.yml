@@ -1,10 +1,17 @@
 spring:
   config:
     activate:
-      on-profile: dev
+      on-profile: prod
   datasource:
     keycloak:
       driver-class-name: org.postgresql.Driver
       username: postgres
       password: postgres
       url: jdbc:postgresql://keycloakSQL:5432/keycloak
+
+keycloak:
+  url: http://keycloak:8080
+  realm: rpg-shop
+  client:
+    id: rpg-shop
+    secret: MS9PSupq4zXwKHLIdTWAlTPaOTUdd0tt
