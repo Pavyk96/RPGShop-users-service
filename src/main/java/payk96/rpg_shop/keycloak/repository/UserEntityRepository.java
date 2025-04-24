@@ -6,5 +6,4 @@ import payk96.rpg_shop.keycloak.model.UserEntity;
 
 @Repository
 public interface UserEntityRepository extends JpaRepository<UserEntity, String> {
-    UserEntity findByUsername(String username);
 }
