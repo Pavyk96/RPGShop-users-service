@@ -10,5 +10,4 @@ import java.util.List;
 
 @Repository
 public interface UserRoleMappingRepository extends JpaRepository<UserRoleMapping, UserRoleMappingId> {
-    List<UserRoleMapping> findByRoleId(String roleId);
 }
