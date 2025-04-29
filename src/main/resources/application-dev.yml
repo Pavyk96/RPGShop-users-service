@@ -14,4 +14,4 @@ keycloak:
   realm: rpg-shop
   client:
     id: rpg-shop
-    secret: MS9PSupq4zXwKHLIdTWAlTPaOTUdd0tt
+    secret: yK2VAzpMEO90HyRAAskDG1l4GNibtk8e

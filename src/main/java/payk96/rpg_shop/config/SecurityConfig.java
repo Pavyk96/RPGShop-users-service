@@ -16,7 +16,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Включаем CORS
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/swagger-ui.html",
@@ -24,11 +24,11 @@ public class SecurityConfig {
                                 "/v3/api-docs/**",
                                 "/swagger-resources/**",
                                 "/webjars/**"
-                        ).permitAll() // Разрешаем доступ к Swagger UI
-                        .requestMatchers("/**").permitAll() // Разрешаем доступ ко всем эндпоинтам
+                        ).permitAll()
+                        .requestMatchers("/**").permitAll()
                         .anyRequest().permitAll()
                 )
-                .csrf(AbstractHttpConfigurer::disable); // Отключаем CSRF (если не требуется)
+                .csrf(AbstractHttpConfigurer::disable);
 
         return http.build();
     }
@@ -36,7 +36,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("*")); // Разрешить запросы от любых источников
+        config.setAllowedOrigins(List.of("*"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
